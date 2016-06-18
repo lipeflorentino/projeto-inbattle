@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'paginas/home'
+
+  get 'paginas/alistamento'
+
+  get 'paginas/heroisdeguerra'
+
+  get 'paginas/sos'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
