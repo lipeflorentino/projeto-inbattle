@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'alistamento'    => 'paginas#alistamento'
   get 'heroisdeguerra'   => 'paginas#heroisdeguerra'
   get 'sos' => 'paginas#sos'
-  get 'signup'  => 'users#new' 
+  get 'signup'  => 'users#new'
+  get 'show' => 'microposts#show'
 
 
 #  get 'users/new'
@@ -36,6 +37,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  resources :microposts
 
   # Example resource route with options:
   #   resources :products do
