@@ -5,7 +5,6 @@
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" href="img/favicon.ico">
 
 <title>IN Battle</title>
 
@@ -14,35 +13,20 @@
 </head>
 
 <body>
-	  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.php"><img class="img-responsive logo-site" src="img/inbattle.png"></a>
+	  <%= link_to "Ad", signup_path, class: "btn btn-lg btn-primary" %>
+
+
+			
+			
+<div class="container-fluid">
+    <div class="container">
+
+	
+			<h2>"Qual é o empresário mais sexi ?"</h2>
+<%= link_to image_tag("arame.gif", alt: "InBattle cerca"),
+            'http://injunior.com/' %>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/paginas/home">Batalha</a></li>
-		<li><a href="/paginas/alistamento">Alistamento</a></li>
-		<li><a href="/paginas/heroisdeguerra">Heróis de Guerra</a></li>
-		<li><a href="/paginas/sos">SOS</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="container-fluid">
-	<div class="row" id="arame"></div>
-</div>
 	<div class="corpo">
 	  <div class="container">
 		<div class="row">
@@ -58,12 +42,15 @@
 		        </div> <!-- /.container -->
 
 	</div> <!-- /.corpo -->
-	
+</div>	
 ﻿<div class="footer">
 	  <div class="container">
 		<div class="row text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="col-xs-12 col-sm-3">
-				<a href="http://injunior.com.br"><img src="img/logo.png" class="img_footer" alt="Logo da IN"></a>
+    <div class="container">
+		<%= link_to image_tag("logo.png", alt: "InJunior"),
+            'http://injunior.com/' %>
+    </div>
 			</div>
 			<div class="col-xs-12 col-sm-9">
 				<p class="p-footer-top"> IN Junior - Empresa Junior do Instituto de Computação da UFF - Todos os direitos reservados</p>
