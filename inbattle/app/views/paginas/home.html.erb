@@ -14,16 +14,22 @@
 
 <body>
 	  <%= link_to "Ad", signup_path, class: "btn btn-lg btn-primary" %>
-
+	  <%= link_to "BD", atualiza_path, class: "btn btn-lg btn-primary" %>
 
 			
 			
 <div class="container-fluid">
     <div class="container">
-			<h2>"Qual é o empresário mais sexi ?"</h2>
-<%= link_to image_tag("arame.gif", alt: "InBattle cerca"),
-            'http://injunior.com/' %>
-    </div>
+
+	<ul class="meio">
+		<% @micropost = Micropost.find(1) %>
+			<li><h1><%= @micropost.tema %></h1></li>
+		
+		<li><%= link_to image_tag("https://www.instagram.com/p/BGzpbzltb-c/", alt: "InBattle cerca"), '#' %> </li>
+		<li><%= link_to image_tag("https://www.instagram.com/p/BGz0a_rtb_D", alt: "InBattle cerca"), '#' %> </li>
+	<li><%= link_to image_tag("arame.gif", alt: "InBattle cerca"), '#' %> </li>
+	</ul>
+	</div>
 
 	<div class="corpo">
 	  <div class="container">
