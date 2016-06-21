@@ -1,14 +1,19 @@
 Rails.application.routes.draw do
 
 
+  get 'sessions/new'
+
   root             'paginas#home'
   get 'alistamento'    => 'paginas#alistamento'
   get 'heroisdeguerra'   => 'paginas#heroisdeguerra'
   get 'sos' => 'paginas#sos'
-  get 'signup'  => 'users#new'
+  get 'signup'  => 'sessions#new'
   get 'atualiza' => 'microposts#new'
-  get 'show' => 'microposts#show'
-
+  get 'm_show' => 'microposts#show'
+  get 'show' => 'users#show'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
 
 #  get 'users/new'
 
@@ -40,6 +45,7 @@ Rails.application.routes.draw do
   #   resources :products
   resources :microposts
   resources :users
+
 
   # Example resource route with options:
   #   resources :products do

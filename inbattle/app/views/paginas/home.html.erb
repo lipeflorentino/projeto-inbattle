@@ -1,4 +1,6 @@
-<html><head>
+<html>
+
+<head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +16,9 @@
 
 <body>
 	  <%= link_to "Ad", signup_path, class: "btn btn-lg btn-primary" %>
-	  <%= link_to "BD", atualiza_path, class: "btn btn-lg btn-primary" %>
-
+      <% if logged_in? %>
+		<%= link_to "BD", atualiza_path, class: "btn btn-lg btn-primary" %>
+	  <% end %>
 			
 			
 <div class="container-fluid">
@@ -25,8 +28,8 @@
 		<% @micropost = Micropost.find(1) %>
 			<li><h1><%= @micropost.tema %></h1></li>
 		
-		<li><%= link_to image_tag("https://www.instagram.com/p/BGzpbzltb-c/", alt: "InBattle cerca"), '#' %> </li>
-		<li><%= link_to image_tag("https://www.instagram.com/p/BGz0a_rtb_D", alt: "InBattle cerca"), '#' %> </li>
+		<li><%= link_to image_tag("@micropost.endereco", alt: "InBattle cerca"), '#' %> </li>
+		<li><%= link_to image_tag("@micropost.endereco", alt: "InBattle cerca"), '#' %> </li>
 	<li><%= link_to image_tag("arame.gif", alt: "InBattle cerca"), '#' %> </li>
 	</ul>
 	</div>
@@ -47,6 +50,7 @@
 
 	</div> <!-- /.corpo -->
 </div>	
+
 ﻿<div class="footer">
 	  <div class="container">
 		<div class="row text-center col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -81,4 +85,5 @@
 	</script>
 
 
-</body></html>
+</body>
+</html>

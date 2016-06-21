@@ -1,0 +1,24 @@
+<h1>Listagem dos temas</h1>
+
+<table>
+	<tr>
+		<th>Tema</th>
+		<th>Endereço</th>
+		<th>User_id</th>
+		<th>Pontos</th>
+	<tr>
+	<% @microposts.each do microposts %>
+	<tr>
+		<td><% => micropost.tema <%></td>
+		<td><% => micropost.endereco <%></td>
+		<td><% => micropost.user_id <%></td>
+		<td><% => micropost.pontos <%></td>
+
+	</tr>
+	<% end %>
+</table>
+
+<%= link_to "Novo tema", new.micropost_path %>
+		
+		
+	
