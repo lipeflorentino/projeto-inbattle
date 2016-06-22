@@ -2,11 +2,11 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <%= link_to image_tag("titulo.gif", alt: "InBattle logo"), 'http://injunior.com/' %>
+      <%= link_to image_tag("titulo.png", alt: "InBattle logo"), root_path %>
     </div>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <% if logged_in? %>
+        <% if !logged_in? %>
         <nav>
     		  <ul class = "nav navbar-nav navbar-right">
     		    <li><%= link_to "Editar usuários", 'users/new' %></li>
@@ -27,10 +27,6 @@
         <% end %>		
       </div>
     </header>
-    
-    <div class="container">
-	    <%= link_to image_tag("arame.gif", alt: "InBattle cerca"), 'http://injunior.com/' %>
-    </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
   </div><!-- /.container-fluid -->
