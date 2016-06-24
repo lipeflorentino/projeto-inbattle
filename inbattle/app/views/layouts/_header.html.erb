@@ -8,24 +8,24 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-left" href="root_path"><%= image_tag("titulo.png", alt: "InBattle logo", id: "logo", class: "img-responsive") %></a>
+        <a class="navbar-left" href="/"><%= image_tag("titulo.png", alt: "InBattle logo", id: "logo", class: "img-responsive") %></a>
       </div>
 
       <div class="col-md-9 texto-header">
         <% if logged_in? %>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class = "nav navbar-nav navbar-right">
-              <li><%= link_to "Editar usuários", 'users/new' %></li>
-              <li><%= link_to "Editar Temas", 'microposts/new' %></li>
-              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-            </ul>
+          <ul class = "nav navbar-nav navbar-right">
+            <li><%= link_to "Incluir usuários", '../../users/new' %></li>
+            <li><%= link_to "Incluir Temas", '../../microposts/new' %></li>
+            <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+          </ul>
         <% else %>
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to "Home",    root_path %></li>
-              <li><%= link_to "Alistamento",   'alistamento' %></li>
-              <li><%= link_to "Heróis de Guerra", 'heroisdeguerra' %></li>
-              <li><%= link_to "S.O.S.", 'sos' %></li>
-            </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",    root_path %></li>
+            <li><%= link_to "Alistamento",   alistamento_path %></li>
+            <li><%= link_to "Heróis de Guerra", heroisdeguerra_path %></li>
+            <li><%= link_to "S.O.S.", sos_path %></li>
+          </ul>
         <% end %>
         </div>
       </div>
