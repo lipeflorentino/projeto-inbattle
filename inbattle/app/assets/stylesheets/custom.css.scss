@@ -5,6 +5,7 @@
 
 body {
   padding-top: 60px;
+  font-family: "Helvetica", Helvetica, sans serif;
 }
 
 section {
@@ -51,16 +52,21 @@ p {
 }
 
 /* header */
+.header-black{
+  background-color:black;
+}
+
+.texto-header a{
+  margin: auto;
+  color: white;
+}
+
+.texto-header a:hover{
+  color: #0066cc;
+}
 
 #logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+  width: 100%;
 }
 
 #logo:hover {
@@ -103,4 +109,22 @@ aside {
 
 .gravatar_edit {
   margin-top: 15px;
+}
+
+/* footer */
+footer{
+  background-color: black;
+}
+
+
+.logo{
+  margin-top: 5%;
+  float: left;
+  width: 30%;
+}
+
+.p-footer{
+  margin-bottom: 20%;
+  margin-top: 20%;
+  text-align: center;
 }
