@@ -14,26 +14,19 @@
       <div class="col-md-9 texto-header">
         <% if logged_in? %>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-<<<<<<< HEAD
-            <ul class = "nav navbar-nav navbar-right">
-              <li><%= link_to "Editar usuários", 'users/new' %></li>
-              <li><%= link_to "Editar Temas", 'microposts/new' %></li>
-              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-			  <li><%= link_to "Trocar Senha", edit_user_path(current_user) %></li>
-            </ul>
-=======
-          <ul class = "nav navbar-nav navbar-right">
-            <li><%= link_to "Incluir usuários", '../../users/new' %></li>
-            <li><%= link_to "Incluir Temas", '../../microposts/new' %></li>
-            <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+          <ul class = "nav navbar-nav navbar-right links">
+            <li><%= link_to "editar usuários", '../../users/new' %></li>
+            <li><%= link_to "editar temas", '../../microposts/new' %></li>
+            <li><%= link_to "log out", logout_path, method: "delete" %></li>
+            <li><%= link_to "todos admin", users_path %></li>
           </ul>
->>>>>>> 5d519bca7508da3db362a2edc168e3668c0d1d39
+
         <% else %>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",    root_path %></li>
-            <li><%= link_to "Alistamento",   alistamento_path %></li>
-            <li><%= link_to "Heróis de Guerra", heroisdeguerra_path %></li>
-            <li><%= link_to "S.O.S.", sos_path %></li>
+          <ul class="nav navbar-nav navbar-right links">
+            <li><%= link_to "início",    root_path %></li>
+            <li><%= link_to "alistamento",   alistamento_path %></li>
+            <li><%= link_to "heróis de guerra", heroisdeguerra_path %></li>
+            <li><%= link_to "contato", sos_path %></li>
           </ul>
         <% end %>
         </div>
