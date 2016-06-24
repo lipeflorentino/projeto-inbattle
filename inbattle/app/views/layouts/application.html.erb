@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  
-  <title>IN Battle</title>
-  
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <%= render 'layouts/shim' %>
-  
-  <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <title>Inbattle</title>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+<%= link_to image_tag("titulo.gif", alt: "InBattle logo"),
+            '#' %>
+    </div>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  <link href="css/custom.css.scss" rel="stylesheet">
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <% if logged_in? %>
+          <nav>
+		  <ul class = "nav navbar-nav navbar-right">
+		  <li><%= link_to "Incluir usuários", '../../users/new' %></li>
+          <li><%= link_to "Incluir Temas", '../../microposts/new' %></li>
+          <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+		  </ul>
+		  </nav>
+        <% else %>
+        <nav>
+         <ul class="nav navbar-nav navbar-right">
+			<li><%= link_to "Home",    root_path %></li>
+			<li><%= link_to "Alistamento",   alistamento_path %></li>
+            <li><%= link_to "Heróis de Guerra", heroisdeguerra_path %></li>
+            <li><%= link_to "S.O.S.", sos_path %></li>
+          </ul>
+        </nav>
+        <% end %>		
+      </div>
+    </header>
+    <div class="container">
+	<%= link_to image_tag("arame.gif", alt: "InBattle cerca"),
+            '#' %></li>
+
+    </div>
+	
+	
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+  </div><!-- /.container-fluid -->
+</nav>
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 
+
 <body>
-  <%= render 'layouts/header' %>
 
-  <%= yield %>
+<%= yield %>
 
-  <%= render 'layouts/footer' %>
-  
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script async="" src="//www.google-analytics.com/analytics.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-  <script type="text/javascript" src="http://simplewebcodes.com/wp-content/themes/scriptous/plugins/bootstrap/js/bootstrap.min.js?ver=4.0"></script>
 </body>
 </html>

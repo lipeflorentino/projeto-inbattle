@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'show' => 'users#show'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  get 'logout'  => 'sessions#destroy'
 
 #  get 'users/new'
 
@@ -44,7 +44,8 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :microposts
-  resources :users
+  resources :users 
+  resources :sessions, only: [:new, :create, :destroy]
 
 
   # Example resource route with options:
