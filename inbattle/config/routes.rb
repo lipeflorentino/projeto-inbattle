@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get 'signup'  => 'sessions#new'
   get 'atualiza' => 'microposts#new'
   get 'm_show' => 'microposts#show'
-  get 'show' => 'users#show'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   get 'logout'  => 'sessions#destroy'

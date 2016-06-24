@@ -1,12 +1,24 @@
+<% provide(:title, 'Entrada de dados') %>
+<h1>Entrada de dados</h1>
 
-<% provide(:title, @micropost) %>
 <div class="row">
-  <aside class="col-md-4">
-    <section class="micropost_info">
-      <h1>
-		<%= @micropost.tema %>
-        <%= @micropost.endereco %>
-      </h1>
-    </section>
-  </aside>
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@micropost) do |f| %>
+		<%= render "shared/micro_error_messages" %>
+
+      <%= f.label :tema %>
+      <%= f.text_field :tema, class: 'form-control' %>
+
+      <%= f.label :endereco %>
+      <%= f.text_field :endereco, class: 'form-control' %>
+
+      <%= f.label :user_id %>
+      <%= f.number_field :user_id, class: 'form-control' %>
+
+      <%= f.label :pontos, "Pontuacao" %>
+      <%= f.number_field :pontos, class: 'form-control' %>
+
+      <%= f.submit "Entrada de dados", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>

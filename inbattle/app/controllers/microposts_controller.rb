@@ -1,6 +1,6 @@
 class MicropostsController < ApplicationController
 	def show
-		@micropost = Micropost.find(params[:id])
+		@microposts = Micropost.all
 	end
 	
 	def new

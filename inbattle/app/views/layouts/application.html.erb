@@ -17,10 +17,12 @@
 		  <ul class = "nav navbar-nav navbar-right">
 		  <li><%= link_to "Incluir usuários", '../../users/new' %></li>
           <li><%= link_to "Incluir Temas", '../../microposts/new' %></li>
+		  <li><%= link_to "Trocar Senha", edit_user_path(current_user) %></li>
           <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+		  <li><%= link_to "Todos admin", users_path %></li>
 		  </ul>
 		  </nav>
-        <% else %>
+        <% end %>
         <nav>
          <ul class="nav navbar-nav navbar-right">
 			<li><%= link_to "Home",    root_path %></li>
@@ -29,7 +31,7 @@
             <li><%= link_to "S.O.S.", sos_path %></li>
           </ul>
         </nav>
-        <% end %>		
+	
       </div>
     </header>
     <div class="container">
