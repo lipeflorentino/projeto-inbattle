@@ -1,24 +1,22 @@
-<h1>Listagem dos temas</h1>
+	<% provide(:title, 'Todos os Temas') %>
+	<h1>Listagem dos temas</h1>
 
+<ul class="microposts">
+	<% @microposts.each do |micropost| %>
+		<li>
+		<%= link_to micropost.tema, micropost %>
+	    <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "Apagar Tema", micropost, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
 <table>
 	<tr>
-		<th>Tema</th>
+		<th>"Tema"</th>
 		<th>Endereço</th>
 		<th>User_id</th>
 		<th>Pontos</th>
 	<tr>
-	<% @microposts.each do microposts %>
-	<tr>
-		<td><% => micropost.tema <%></td>
-		<td><% => micropost.endereco <%></td>
-		<td><% => micropost.user_id <%></td>
-		<td><% => micropost.pontos <%></td>
-
-	</tr>
-	<% end %>
 </table>
 
 <%= link_to "Novo tema", new.micropost_path %>
-		
-		
-	
+

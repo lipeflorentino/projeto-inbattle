@@ -27,10 +27,10 @@
 	<ul class="meio">
 		<% @micropost = Micropost.find(1) %>
 			<li><h1><%= @micropost.tema %></h1></li>
-		<li><%= link_to image_tag(@micropost.endereco, alt: "InBattle cerca"), '#' %> </li>
+		<li><%= link_to image_tag(@micropost.endereco, alt: "Candidato 1"), '#' %> </li>
 XXXXXX
 		<% @micropost = Micropost.find(2) %>
-		<li><%= link_to image_tag(@micropost.endereco, alt: "InBattle cerca"), '#' %> </li>
+		<li><%= link_to image_tag(@micropost.endereco, alt: "Candidato 2"), '#' %> </li>
 	<li><%= link_to image_tag("arame.gif", alt: "InBattle cerca"), '#' %> </li>
 	</ul>
 	</div>
