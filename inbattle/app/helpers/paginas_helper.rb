@@ -3,6 +3,4 @@ module PaginasHelper
 
 
 
-
-
 end

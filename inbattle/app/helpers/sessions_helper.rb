@@ -78,27 +78,20 @@ module SessionsHelper
   def soma (vitoria)
 	@local=vitoria
 	@local.pontos = @local.pontos.to_i + 1
-	if @local.save 
+	if @local.save
 	end
 
 end
 
   def define ()
-		@numero = Candidato.find(Candidato.count).pontos
-		@numero = @numero + Candidato.count
-		@numero = @numero % Candidato.count
-		@numero = @numero + 1
-	return @numero
+	return Candidato.find(Candidato.count)
   end
   
   def infine ()
-		@numero = Candidato.find(1).pontos
-		@numero = @numero + Candidato.count
-		@numero = @numero % Candidato.count
-		@numero = @numero + 1
-		
-	return @numero
+			return Candidato.find(1)
   end
+
+
   
 end
   

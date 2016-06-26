@@ -2,44 +2,38 @@
 
 
 <body>
-	  <%= link_to "Ad", signup_path, class: "btn btn-lg btn-primary" %>
-      <% if logged_in? %>
-	  <%= link_to "BD", atualiza_path, class: "btn btn-lg btn-primary" %>
-	  <% end %>
+
+		<%= link_to "Ad", signup_path, class: "btn btn-lg btn-primary" %>
+
+		<% if logged_in? %>
+			<%= link_to "BD", atualiza_path, class: "btn btn-lg btn-primary" %>
+		<% end %>
 			
 
 		<h1><%= @tema.tema %></h1></li>
-		<%= link_to image_tag(@candidatoa.endereco, alt: "Candidato 1", width: 300, high: 300), method: soma(@candidatoa) %>
-
-
-			XXXXXX
-
-
-			<%= link_to image_tag(@candidatob.endereco, alt: "Candidato 2", width: 300, high: 300), soma(@candidatob) %>
-
+		
+		<%= link_to image_tag(@candidatoa.endereco, alt: "Candidato 1", width: 300, high: 300), soma(@candidatoa) %>
+			XXXXXXXXXXXXXXXXXX
+		<%= link_to image_tag(@candidatob.endereco, alt: "Candidato 2", width: 300, high: 300), soma(@candidatob) %>
 
 	<div>
 		<%= link_to image_tag("arame.gif", alt: "InBattle cerca"), '#' %> </li>
 	</div>
-</div>
+
 	
 	<div class="corpo">
 	  <div class="container">
 		<div class="row">
 			<h2 id="qualTema">Clique na imagem do combatente que representa melhor o tema:</h2>
-			<h1>
-                            </h1>
 		</div>
 		<div class="battle row center-block text-center">
 			<span> E aí, vai deixar mesmo o campo de batalha vazio? </span><br>
 			<span>Tira essa farda preta que vc é moleque...</span><br>
 			<span>ou poste logo uma foto no Instagram com a <b>#INBattle</b></span>
 		</div>
-		        </div> 
-
+	  </div> 
 	</div>
-</div>	
-
 
 </body>
+
 </html>
