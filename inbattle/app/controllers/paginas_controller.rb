@@ -11,6 +11,14 @@ class PaginasController < ApplicationController
 			   @aux2=@aux1+1
 			end
 		end
+
+		@guarda=Micropost.find(4)
+		@guarda.pontos=@aux1
+		@guarda.save
+		@guarda=Micropost.find(5)
+		@guarda.pontos=@aux2
+		@guarda.save
+
 		@candidatoa = Candidato.find(@aux1)
 		@candidatob = Candidato.find(@aux2)
 	

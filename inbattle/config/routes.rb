@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   get 'logout'  => 'sessions#destroy'
+  get 'soma1' => 'candidatos#soma1'
+  get 'soma2' => 'candidatos#soma2'
 
 #  get 'users/new'
 

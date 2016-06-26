@@ -20,8 +20,26 @@ class CandidatosController < ApplicationController
     else
       render 'new'
     end
+	end
 
-  end
+	def soma1
+		@cara=Micropost.find(4)
+		@ganhador=Candidato.find(@cara.pontos)
+		@ganhador.pontos=@ganhador.pontos.to_i+1
+		if @ganhador.save
+		redirect_to root_url
+		end
+	end
+	
+	def soma2
+		@cara=Micropost.find(5)
+		@ganhador=Candidato.find(@cara.pontos)
+		@ganhador.pontos=@ganhador.pontos.to_i+1
+		if @ganhador.save
+		redirect_to root_url
+		end
+	end
+
   
     private
 

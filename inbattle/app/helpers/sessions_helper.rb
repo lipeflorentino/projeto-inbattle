@@ -75,13 +75,6 @@ module SessionsHelper
     session[:forwarding_url] = request.url if request.get?
   end
   
-  def soma (vitoria)
-	@local=vitoria
-	@local.pontos = @local.pontos.to_i + 1
-	if @local.save
-	end
-
-end
 
   def define ()
 		@geral=Micropost.find(3)
