@@ -84,11 +84,33 @@ module SessionsHelper
 end
 
   def define ()
-	return Candidato.find(Candidato.count)
+		@local=Micropost.find(1)
+		if @local.pontos==0
+		@local.pontos = 1
+		else
+		@local.pontos = @local.pontos+1
+		end
+		if @local.pontos==Candidato.count
+		@local.pontos = 0
+		end
+		@local.save
+
+	return @local.pontos
   end
   
   def infine ()
-			return Candidato.find(1)
+		@local=Micropost.find(2)
+		if @local.pontos==0
+		@local.pontos = Candidato.count
+		else
+		@local.pontos = @local.pontos-1
+		end
+		if @local.pontos==0
+		@local.pontos = Candidato.count
+		end
+		@local.save
+
+	return @local.pontos
   end
 
 
