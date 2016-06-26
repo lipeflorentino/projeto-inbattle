@@ -56,9 +56,15 @@ p {
   background-color:black;
 }
 
+.links{
+    padding-top:1px;
+    margin:auto;
+}
+
 .texto-header a{
   margin: auto;
   color: white;
+  font-size: 18px;
 }
 
 .texto-header a:hover{
@@ -67,11 +73,6 @@ p {
 
 #logo {
   width: 100%;
-}
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
 }
 
 /* sidebar */
@@ -114,12 +115,14 @@ aside {
 /* footer */
 footer{
   background-color: black;
+  position: fixed;
+  bottom:0;
+  width:100%;
 }
 
 
 .logo{
   margin-top: 5%;
-  float: left;
   width: 30%;
 }
 
