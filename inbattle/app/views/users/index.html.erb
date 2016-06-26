@@ -6,9 +6,7 @@
     <li>
 
       <%= link_to user.name, user %>
-	    <% if current_user.admin? && !current_user?(user) %>
-      <%= link_to "Apagar Admin", user, method: "delete" %>
-  <% end %>
+
     </li>
   <% end %>
 </ul>

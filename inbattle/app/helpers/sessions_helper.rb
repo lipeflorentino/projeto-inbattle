@@ -79,7 +79,6 @@ module SessionsHelper
 	@local=vitoria
 	@local.pontos = @local.pontos.to_i + 1
 	if @local.save 
-        root_path
 	end
 
 end
