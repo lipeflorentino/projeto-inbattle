@@ -16,10 +16,14 @@
           <nav>
 		  <ul class = "nav navbar-nav navbar-right">
 		  <li><%= link_to "Incluir usuários", '../../users/new' %></li>
-          <li><%= link_to "Incluir Temas", '../../microposts/new' %></li>
+          <li><%= link_to "Incluir Temas", '../../temas/new' %></li>
+          <li><%= link_to "Incluir Candidatos", '../../candidatos/new' %></li>
 		  <li><%= link_to "Trocar Senha", edit_user_path(current_user) %></li>
           <li><%= link_to "Log out", logout_path, method: "delete" %></li>
 		  <li><%= link_to "Todos admin", users_path %></li>
+		  <li><%= link_to "Todos candidatos", candidatos_path %></li>
+		  <li><%= link_to "Todos os temas", temas_path %></li>
+		  
 		  </ul>
 		  </nav>
         <% end %>

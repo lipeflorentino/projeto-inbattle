@@ -75,5 +75,31 @@ module SessionsHelper
     session[:forwarding_url] = request.url if request.get?
   end
   
+  def soma (vitoria)
+	@local=vitoria
+	@local.pontos = @local.pontos.to_i + 1
+	if @local.save 
+        root_path
+	end
+
+end
+
+  def define ()
+		@numero = Candidato.find(Candidato.count).pontos
+		@numero = @numero + Candidato.count
+		@numero = @numero % Candidato.count
+		@numero = @numero + 1
+	return @numero
+  end
+  
+  def infine ()
+		@numero = Candidato.find(1).pontos
+		@numero = @numero + Candidato.count
+		@numero = @numero % Candidato.count
+		@numero = @numero + 1
+		
+	return @numero
+  end
+  
 end
   

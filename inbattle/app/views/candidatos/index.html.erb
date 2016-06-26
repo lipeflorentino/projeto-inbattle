@@ -1,0 +1,16 @@
+<% provide(:title, 'Todos os candidatos') %>
+<h1>Todos os Candidatos</h1>
+
+<ul class="candidatos">
+  <% @candidato.each do |candidato| %>
+    <li>
+
+      <%= link_to candidato.endereco, candidato %>
+	    <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "Apagar Admin", user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+    </li>
+  <% end %>
+</ul>
+

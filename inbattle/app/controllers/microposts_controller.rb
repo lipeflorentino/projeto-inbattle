@@ -1,6 +1,6 @@
 class MicropostsController < ApplicationController
 	def show
-		@microposts = Micropost.all
+		@micropost = Micropost.all
 	end
 	
 	def new

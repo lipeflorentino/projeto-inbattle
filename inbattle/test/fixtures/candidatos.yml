@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  endereco: MyText
+  pontos: 1
+  tema_id: 
+
+two:
+  endereco: MyText
+  pontos: 1
+  tema_id: 

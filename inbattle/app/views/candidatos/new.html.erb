@@ -1,0 +1,15 @@
+<% provide(:title, 'Entrada dos Candidatos') %>
+<h1>Entrada dos Candidatos</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@candidato) do |f| %>
+		<%= render "shared/micro_error_candidatos" %>
+
+      <%= f.label :candidato %>
+      <%= f.text_field :endereco, class: 'form-control' %>
+
+      <%= f.submit "Entrada de dados", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,5 +1,12 @@
 class PaginasController < ApplicationController
   def home
+			@aux1 = define 
+			@aux2 = infine
+
+		@tema = Tema.find(1)
+		@candidatoa = Candidato.find(@aux1)
+		@candidatob = Candidato.find(@aux2)
+	
   end
 
   def alistamento
@@ -10,4 +17,5 @@ class PaginasController < ApplicationController
 
   def sos
   end
+
 end
