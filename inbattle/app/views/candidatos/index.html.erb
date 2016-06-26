@@ -2,15 +2,12 @@
 <h1>Todos os Candidatos</h1>
 
 <ul class="candidatos">
-  <% @candidato.each do |candidato| %>
-    <li>
+  <% @candidato.each do |cand| %>
+    <li><%= cand.endereco %>
+	<%= link_to image_tag(cand.endereco, alt: "Candidato 1", width: 100, high: 100), '#' %>
+	</li>
+	<li>Pontos: <%= cand.pontos %>
 
-      <%= link_to candidato.endereco, candidato %>
-	    <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "Apagar Admin", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-  <% end %>
-    </li>
   <% end %>
 </ul>
 

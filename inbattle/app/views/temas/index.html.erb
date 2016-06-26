@@ -1,15 +1,10 @@
 <% provide(:title, 'Todos os Temas') %>
 <h1>Todos os Temas</h1>
 
-<ul class="candidatos">
+<ul class="temas">
   <% @temaa.each do |temaa| %>
     <li>
-
       <%= link_to temaa.tema, temaa %>
-	    <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "Apagar Admin", user, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-  <% end %>
     </li>
   <% end %>
 </ul>
