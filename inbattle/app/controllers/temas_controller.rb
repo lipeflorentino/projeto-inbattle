@@ -14,7 +14,8 @@ class TemasController < ApplicationController
 	def create
     @tema = Tema.new(tema_params)
     if @tema.save
-	    @tema = Tema.new(tema_params)
+	    @tema = Tema.new
+		flash[:success] = "Assunto incluído com êxito"
     	render 'new'
     else
       render 'new'
