@@ -8,7 +8,7 @@ class TemasController < ApplicationController
 	end
 	
 	def index
-	    @temaa = Tema.all
+	    @tema = Tema.all
   end
   
 	def create
@@ -20,12 +20,39 @@ class TemasController < ApplicationController
     else
       render 'new'
     end
-
-  end
+	end
+	
+	
+	def somatema1
+		@cara=Micropost.find(6)
+		@ganhador=Tema.find(@cara.pontos)
+		@ganhador.pontos=@ganhador.pontos.to_i+1
+		if @ganhador.save
+		redirect_to root_url
+		end
+	end
+	
+	def somatema2
+		@cara=Micropost.find(7)
+		@ganhador=Candidato.find(@cara.pontos)
+		@ganhador.pontos=@ganhador.pontos.to_i+1
+		if @ganhador.save
+		redirect_to root_url
+		end
+	end		
+	
+	def somatema3
+		@cara=Micropost.find(8)
+		@ganhador=Candidato.find(@cara.pontos)
+		@ganhador.pontos=@ganhador.pontos.to_i+1
+		if @ganhador.save
+		redirect_to root_url
+		end
+	end
   
     private
 
     def tema_params
-      params.require(:tema).permit(:tema, :user_id)
+      params.require(:tema).permit(:conteudo)
     end
 end

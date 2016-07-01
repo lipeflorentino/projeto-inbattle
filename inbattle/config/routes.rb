@@ -12,23 +12,12 @@ Rails.application.routes.draw do
   get 'm_show' => 'microposts#show'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
-
+  get 'voto1' => 'voto#voto1'  
+  get 'voto2' => 'voto#voto2'  
+  get 'voto3' => 'voto#voto3'
   get 'soma1' => 'candidatos#soma1'
   get 'soma2' => 'candidatos#soma2'
   delete 'logout'  => 'sessions#destroy'
-
-#  get 'users/new'
-
- # get 'paginas/home'
-
-  #get 'paginas/alistamento'
-
-#  get 'paginas/heroisdeguerra'
-
- # get 'paginas/sos'
-
-  #get 'welcome/index'
-  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -21,6 +21,11 @@ class PaginasController < ApplicationController
 
 		@candidatoa = Candidato.find(@aux1)
 		@candidatob = Candidato.find(@aux2)
+		
+		@assunto1 = Tema.find(2)
+		@assunto2 = Tema.find(3)
+		@assunto3 = Tema.find(4)
+		
 	
   end
 

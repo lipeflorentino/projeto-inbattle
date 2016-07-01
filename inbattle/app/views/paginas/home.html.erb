@@ -10,7 +10,7 @@
 		<% end %>
 			
 
-		<h1><%= @tema.tema %></h1></li>
+		<h1><%= @tema.conteudo %></h1></li>
 		    X-X-X-X-X-X-X-X-X-X-X-X-X
 		<%= link_to image_tag(@candidatoa.endereco, alt: "Candidato 1", width: 300, high: 300), soma1_path  %>
 			X-X-X-X-X-X-X-X-X-X-X-X-X
@@ -19,18 +19,25 @@
 	<div>
 		<%= link_to image_tag("arame.gif", alt: "InBattle cerca"), '#' %> </li>
 	</div>
+	
+	
 
 	
 	<div class="corpo">
 	  <div class="container">
 		<div class="row">
+
 			<h2 id="qualTema">Clique na imagem do combatente que representa melhor o tema:</h2>
-		</div>
+		  </div>
 		<div class="battle row center-block text-center">
 			<span> E aí, vai deixar mesmo o campo de batalha vazio? </span><br>
 			<span>Tira essa farda preta que vc é moleque...</span><br>
 			<span>ou poste logo uma foto no Instagram com a <b>#INBattle</b></span>
 		</div>
+				  <h3>"Quer votar num tema para amanhã?"</h3>
+		<%= link_to @assunto1.conteudo, voto1_path, class: "btn btn-lg btn-primary" %>
+		<%= link_to @assunto2.conteudo, voto2_path, class: "btn btn-lg btn-primary" %>
+		<%= link_to @assunto3.conteudo, voto3_path, class: "btn btn-lg btn-primary" %>
 	  </div> 
 	</div>
 

@@ -6,11 +6,8 @@
     <%= form_for(@tema) do |f| %>
 		<%= render "shared/micro_error_temas" %>
 
-      <%= f.label :tema %>
-      <%= f.text_field :tema, class: 'form-control' %>
-
-      <%= f.label :user_id %>
-      <%= f.number_field :user_id, class: 'form-control' %>
+      <%= f.label :conteudo %>
+      <%= f.text_field :conteudo, class: 'form-control' %>
 
       <%= f.submit "Entrada de dados", class: "btn btn-primary" %>
     <% end %>

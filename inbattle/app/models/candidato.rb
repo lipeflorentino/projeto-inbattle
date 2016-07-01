@@ -1,3 +1,3 @@
 class Candidato < ActiveRecord::Base
-  belongs_to :tema
+  belongs_to :conteudo
 end
