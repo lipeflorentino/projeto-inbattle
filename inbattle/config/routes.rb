@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'soma2' => 'candidatos#soma2'
   delete 'logout'  => 'sessions#destroy'
  get 'trocar_os_temas' => 'temas#trocar_os_temas'
+ get 'iniciais' => 'microposts#iniciais'
 
 
 

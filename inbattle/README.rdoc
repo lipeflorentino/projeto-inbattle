@@ -1,28 +1,27 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1 - Na primeira vez que estiver inicializando o software, pode ser que o Banco de Dados tenha de ser criado.
 
-Things you may want to cover:
+Neste caso, no prompt do rails deve estar no diretório raiz do software e ali deve ser digitado o comando
+bundle exec rake db:migrate
 
-* Ruby version
+Este comando cria um arquivo sqlite3 já com a estrutura requisitada pelo programa
 
-* System dependencies
+2 - Caso o BD já esteja criado, é preciso preencher alguns de seus elementos, a saber:
+A - Incluir quatro temas iniciais rodando a chamada
+root_path/temas/new
+Ali é deverão ser incluídos quatro temas, dos quais o primeiro já será o tema do dia, 
+os outros ficaram expostos para receber votos e poderão receber a indicação para o novo tema.
 
-* Configuration
+B - Inicializar o BD micropost com 5 registros e duas imagens
+Caso queira realizar esta operação com linha de comando, siga os seguintes passos.
+B1 - Salve duas imagens no diretório root_path/assets/images
+com os nomes 1.jpg e 2.jpg
+Digite no browser o comando root_path/iniciais
 
-* Database creation
+3 - Todas as novas modificaões já poderão ser feitas a partir do acesso à área administrativa do programa por meio de
+um login e senha administrativa que deverão sem implementados a partir da chamada
+root_path/users/new
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+4 - Os próximos acessos à área administrativa podem ser feitas por meio da chamada
+signup_path

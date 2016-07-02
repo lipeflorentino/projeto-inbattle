@@ -3,7 +3,7 @@
 
 <%= link_to "Mudar o tema do dia pela pontuação", trocar_os_temas_path, class: "btn btn-lg btn-primary" %>
 
-	
+<br></br>	
 <ul class="temas">
   <% @tema.each do |tema| %>
     <li>
@@ -13,7 +13,7 @@
 			<% end %>
 	   <h4>Pontos:
 	   <%= link_to tema.pontos, tema %> </h4>
-    </li>
+    </li><br></br>
   <% end %>
 </ul>
 
