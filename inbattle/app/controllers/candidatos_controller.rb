@@ -1,5 +1,5 @@
 class CandidatosController < ApplicationController
-
+	
 	def show
 		@candidato = Candidato.all
 	end
@@ -40,6 +40,12 @@ class CandidatosController < ApplicationController
 		end
 	end
 
+
+  def destroy
+    Candidato.find(params[:id]).destroy
+    flash[:success] = "Usuário apagado"
+    redirect_to candidatos_url
+  end
   
     private
 

@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   get 'heroisdeguerra'   => 'paginas#heroisdeguerra'
   get 'sos' => 'paginas#sos'
   get 'signup'  => 'sessions#new'
-  get 'atualiza' => 'microposts#new'
-  get 'm_show' => 'microposts#show'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   get 'voto1' => 'voto#vototema1'  
@@ -18,7 +16,8 @@ Rails.application.routes.draw do
   get 'soma1' => 'candidatos#soma1'
   get 'soma2' => 'candidatos#soma2'
   delete 'logout'  => 'sessions#destroy'
-  get 'trocar_os_temas' => 'temas#trocar_os_temas'
+ get 'trocar_os_temas' => 'temas#trocar_os_temas'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

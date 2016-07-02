@@ -15,45 +15,12 @@
     <link href="css/custom.css.scss" rel="stylesheet">
     <%= render 'layouts/shim' %>
  
-
-
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <% if logged_in? %>
-          <nav>
-		  <ul class = "nav navbar-nav navbar-right">
-		  <li><%= link_to "Incluir usuários", '../../users/new' %></li>
-          <li><%= link_to "Incluir Temas", '../../temas/new' %></li>
-          <li><%= link_to "Incluir Candidatos", '../../candidatos/new' %></li>
-		  <li><%= link_to "Trocar Senha", edit_user_path(current_user) %></li>
-          <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-		  <li><%= link_to "Todos admin", users_path %></li>
-		  <li><%= link_to "Todos candidatos", candidatos_path %></li>
-		  <li><%= link_to "Todos os temas", temas_path %></li>
-		  
-		  </ul>
-		  </nav>
-        <% end %>
-
-	
-      </div>
-    </header>
     <div class="container">
-	<%= link_to image_tag("arame.gif", alt: "InBattle cerca"),
+		<%= link_to image_tag("arame.gif", alt: "InBattle cerca"),
             '#' %></li>
-
     </div>
 	
-	
-    <!-- Collect the nav links, forms, and other content for toggling -->
-
-  </div><!-- /.container-fluid -->
-</nav>
-  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-
+  </head>
 
   <body>
     <%= render 'layouts/header' %> 

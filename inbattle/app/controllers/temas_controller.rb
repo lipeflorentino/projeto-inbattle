@@ -1,15 +1,20 @@
 class TemasController < ApplicationController
+
 	def show
-		@tema = Tema.all
+		@tema = Tema.find(params[:id])
 	end
-	
+
 	def new
 	      @tema = Tema.new
 	end
 	
 	def index
 	    @tema = Tema.all
-  end
+    end
+	
+	def edit
+		@tema = Tema.find(params[:id])
+	end
   
 	def create
     @tema = Tema.new(tema_params)
@@ -22,6 +27,16 @@ class TemasController < ApplicationController
     end
 	end
 	
+	def update
+		@tema = Tema.find(params[:id])
+		if @tema.update_attributes(tema_params)
+			flash[:success] = "Profile updated"
+			redirect_to temas_path
+		else
+		render 'edit'
+		end
+	end
+  
 	def trocar_os_temas
 	ordem1 = Tema.find(1)
 	i = 1
@@ -51,6 +66,6 @@ class TemasController < ApplicationController
     private
 
     def tema_params
-      params.require(:tema).permit(:conteudo)
+      params.require(:tema).permit(:conteudo, :id)
     end
 end

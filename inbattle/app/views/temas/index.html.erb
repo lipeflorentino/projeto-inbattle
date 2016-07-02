@@ -1,14 +1,18 @@
 <% provide(:title, 'Todos os Temas') %>
 <h1>Todos os Temas</h1>
 
-		<%= link_to "Mudar o tema do dia pela pontuação", trocar_os_temas_path, class: "btn btn-lg btn-primary" %>
-		
+<%= link_to "Mudar o tema do dia pela pontuação", trocar_os_temas_path, class: "btn btn-lg btn-primary" %>
+
+	
 <ul class="temas">
   <% @tema.each do |tema| %>
     <li>
-      <%= link_to tema.conteudo, tema %>
-	  <h4>Pontos:
-	  <%= link_to tema.pontos, tema %> </h4>
+       <%= link_to tema.conteudo, tema %>
+	   |  |<% if current_user.admin? %>
+				<%= link_to "troca o tema por outro", edit_tema_path(tema.id) %>
+			<% end %>
+	   <h4>Pontos:
+	   <%= link_to tema.pontos, tema %> </h4>
     </li>
   <% end %>
 </ul>

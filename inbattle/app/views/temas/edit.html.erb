@@ -1,0 +1,16 @@
+<% provide(:title, 'Editar o Tema') %>
+<h1>Substitua o tema</h1>
+		
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@tema) do |f| %>
+		<%= render "shared/micro_error_temas" %>
+		
+      <%= f.label :conteudo %>
+      <%= f.text_field :conteudo, class: 'form-control' %>
+
+      <%= f.submit "Salve o novo tema", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

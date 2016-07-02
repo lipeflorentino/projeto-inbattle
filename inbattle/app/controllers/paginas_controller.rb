@@ -1,6 +1,6 @@
 class PaginasController < ApplicationController
   def home
-		@tema = Tema.find(1)
+		@tema = Tema.find(Micropost.find(1))
 
 		@aux1 = define 
 		@aux2 = infine

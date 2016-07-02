@@ -4,7 +4,7 @@
 <ul class="candidatos">
   <% @candidato.each do |cand| %>
     <li><%= cand.endereco %>
-	<%= link_to image_tag(cand.endereco, alt: "Candidato 1", width: 100, high: 100), '#' %>
+	<%= link_to image_tag(cand.endereco, alt: "Candidato 1", width: 80, high: 80), '#' %>
 	</li>
 	<li>Pontos: <%= cand.pontos %>
 
