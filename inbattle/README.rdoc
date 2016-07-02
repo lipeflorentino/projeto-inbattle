@@ -13,10 +13,16 @@ root_path/temas/new
 Ali é deverão ser incluídos quatro temas, dos quais o primeiro já será o tema do dia, 
 os outros ficaram expostos para receber votos e poderão receber a indicação para o novo tema.
 
-B - Inicializar o BD micropost com 5 registros e duas imagens
-Caso queira realizar esta operação com linha de comando, siga os seguintes passos.
-B1 - Salve duas imagens no diretório root_path/assets/images
-com os nomes 1.jpg e 2.jpg
+B - Incluir duas imagens iniciais para os competidores
+Coloque duas imagens denominadas 1.jpg e 2.jpg no diretório
+root_path/assets/images
+digite no browser o comando:
+root_path/candidatos/new
+
+digite na linha de entrada 1.jpg e aperte o botão
+depois, digite 2.jpg e aperte novamente o botão
+
+C - Inicializar o BD micropost
 Digite no browser o comando root_path/iniciais
 
 3 - Todas as novas modificaões já poderão ser feitas a partir do acesso à área administrativa do programa por meio de
