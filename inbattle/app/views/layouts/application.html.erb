@@ -14,18 +14,19 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css.scss" rel="stylesheet">
     <%= render 'layouts/shim' %>
- 
-    <div class="container">
-		<%= link_to image_tag("arame.gif", alt: "InBattle cerca"),
-            '#' %></li>
-    </div>
 	
   </head>
 
   <body>
     <%= render 'layouts/header' %> 
+    
+    
     <%= yield %>
+    
+    
+    <br>
     <%= render 'layouts/footer' %>
+    
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script async="" src="//www.google-analytics.com/analytics.js"></script>

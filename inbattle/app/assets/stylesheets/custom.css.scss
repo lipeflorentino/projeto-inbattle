@@ -3,6 +3,11 @@
 
 /* universal */
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   padding-top: 60px;
   font-family: "Helvetica", Helvetica, sans serif;
@@ -52,8 +57,12 @@ p {
 }
 
 /* header */
-.header-black{
-  background-color:black;
+.icon-bar{
+  background-color: darkgrey;
+}
+
+.navbar-header{
+  width:100%;
 }
 
 .links{
@@ -63,7 +72,7 @@ p {
 
 .texto-header a{
   margin: auto;
-  color: white;
+  color: black;
   font-size: 18px;
 }
 
@@ -72,7 +81,8 @@ p {
 }
 
 #logo {
-  width: 100%;
+  min-width:220px;
+  max-width: 50%;
 }
 
 /* sidebar */
@@ -115,19 +125,25 @@ aside {
 /* footer */
 footer{
   background-color: black;
-  position: fixed;
-  bottom:0;
-  width:100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
+.pageContentWrapper{
+  margin-bottom:100px;/* Height of footer*/
+} 
 
 .logo{
-  margin-top: 5%;
-  width: 30%;
+  height:100px;
+  display: block;
+  margin: 0 auto;
 }
 
-.p-footer{
-  margin-bottom: 20%;
-  margin-top: 20%;
+.div-footer{
+  margin: 0 auto;
+  display: block;
+  background-color: black;
   text-align: center;
 }
