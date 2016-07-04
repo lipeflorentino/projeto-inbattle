@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :contacts
   get 'sessions/new'
 
   root             'paginas#home'

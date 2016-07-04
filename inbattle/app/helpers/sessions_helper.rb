@@ -113,8 +113,6 @@ module SessionsHelper
 
 	return @local.pontos
   end
-
-
   
 end
   

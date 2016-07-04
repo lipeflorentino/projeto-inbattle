@@ -1,5 +1,30 @@
 <div class="container">
-  <article>
-    <h2>Heróis de Guerra</h2>
-  </article>
+    <h1>Heróis de Guerra</h1>
+    
+    <div class="col-md-6">
+      <h2>Melhores Combatentes do Dia</h2>
+        <%= link_to image_tag(@candidatoa.endereco, alt: "Candidato 1", class:"image-candidato"), soma1_path  %>
+        <br>
+        Candidato 1 <br>
+        Denunciar
+        <br>
+  		  <%= link_to image_tag(@candidatob.endereco, alt: "Candidato 2", class:"image-candidato"), soma2_path %>
+  		  <br>
+        Candidato 2 <br>
+        Denunciar
+    </div>
+    
+    <div class="col-md-6">
+      <h2>Heróis de Guerra</h2>
+        <%= link_to image_tag(@candidatoa.endereco, alt: "Candidato 1", class:"image-candidato"), soma1_path  %>
+        <br>
+        Candidato 1 <br>
+        Denunciar
+        <br>
+  		  <%= link_to image_tag(@candidatob.endereco, alt: "Candidato 2", class:"image-candidato"), soma2_path %>
+  		  <br>
+        Candidato 2 <br>
+        Denunciar
+    </div>
+    
 </div>

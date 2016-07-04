@@ -10,7 +10,7 @@ class TemasController < ApplicationController
 	
 	def index
 	    @tema = Tema.all
-    end
+			end
 	
 	def edit
 		@tema = Tema.find(params[:id])
@@ -36,33 +36,33 @@ class TemasController < ApplicationController
 		render 'edit'
 		end
 	end
-  
+	
 	def trocar_os_temas
-	ordem1 = Tema.find(1)
-	i = 1
-	ordem1.pontos = 0
-	ordem1.save
-	while i < Tema.count
-		ordem1 = Tema.find(1)
-		ordem = Tema.find(i+1)
-		if ordem.pontos>ordem1.pontos
-			ordem1.id=Tema.count+1
-			ordem1.save
-			ordem.id=1
-			ordem.save
-			ordem1.id=i+1
-			ordem1.pontos=0
-			ordem1.save
-		else
-		ordem.pontos=0
-		ordem.save
-		end
-		i = i + 1
-	end
-	redirect_to root_path
+  	ordem1 = Tema.find(1)
+  	i = 1
+  	ordem1.pontos = 0
+  	ordem1.save
+  	while i < Tema.count
+  		ordem1 = Tema.find(1)
+  		ordem = Tema.find(i+1)
+  		if ordem.pontos>ordem1.pontos
+  			ordem1.id=Tema.count+1
+  			ordem1.save
+  			ordem.id=1
+  			ordem.save
+  			ordem1.id=i+1
+  			ordem1.pontos=0
+  			ordem1.save
+  		  else
+    		ordem.pontos=0
+    		ordem.save
+    		end
+    	i = i + 1
+    	end
+    	redirect_to root_path
 	end
 	
- 
+	
     private
 
     def tema_params

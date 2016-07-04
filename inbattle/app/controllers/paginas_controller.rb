@@ -33,6 +33,11 @@ class PaginasController < ApplicationController
   end
 
   def heroisdeguerra
+  	
+  	@candidatoa = Candidato.find(1)
+		@candidatob = Candidato.find(2)
+		@candidatoc = Candidato.find(3)
+		
   end
 
   def sos

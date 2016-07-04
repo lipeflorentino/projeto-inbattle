@@ -9,13 +9,9 @@ html {
 }
 
 body {
-  padding-top: 60px;
   font-family: "Helvetica", Helvetica, sans serif;
 }
 
-section {
-  overflow: auto;
-}
 
 textarea {
   resize: vertical;
@@ -27,6 +23,11 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
+}
+
+.image-candidato {
+  border-radius:100%;
+  width:300px;
 }
 
 /* typography */
@@ -69,7 +70,9 @@ p {
     padding-top:1px;
     margin:auto;
 }
-
+.nav li a:hover{
+  background-color:white;
+}
 .texto-header a{
   margin: auto;
   color: black;
@@ -81,8 +84,12 @@ p {
 }
 
 #logo {
-  min-width:220px;
+  min-width:180px;
   max-width: 50%;
+}
+
+.arame {
+  max-width:100%;
 }
 
 /* sidebar */
@@ -123,13 +130,7 @@ aside {
 }
 
 /* footer */
-footer{
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+
 
 .pageContentWrapper{
   margin-bottom:100px;/* Height of footer*/
@@ -144,6 +145,35 @@ footer{
 .div-footer{
   margin: 0 auto;
   display: block;
-  background-color: black;
   text-align: center;
+  color:white;
+}
+
+.cp-footer {
+	font-family: Verdana, Serif; 
+	color: white;
+	padding-top: 45px;
+	padding-bottom: 20px;
+	width: 100%;
+   	height: 100%;
+   	background-color: black;
+   	overflow: auto;
+}
+.cp-footer-body{
+	height: 100%;
+	width: 100%;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.cp-footer-dev{
+	padding-bottom: 0px;
+	font-size: 100%;
+}
+.cp-footer-contato{
+	font-family: Verdana, Serif;
+	font-size: 100%;
+	width: 100%;
+}
+.Copyright {
+	font-size: 80%;
 }
