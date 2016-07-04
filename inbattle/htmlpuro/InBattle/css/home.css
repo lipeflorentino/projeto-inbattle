@@ -1,0 +1,100 @@
+.navbar-default{
+	background-color: transparent;
+	border:0;
+	padding-top: 15px;
+
+	
+}
+.navbar-brand{
+	padding-top: 10px;
+	display:block;
+
+}
+
+.navbar{
+	margin-bottom: -5px;
+}
+
+header a{
+	
+	font-family:"Top Secret";
+
+}
+
+.navbar-default .navbar-nav>li>a{
+	color:black;
+	padding-top: 35px;
+}
+
+#navbar-collapse-1{
+	font-size: 25px;
+}
+#footer{
+	background-color: black;
+	
+}
+.container{
+	padding: 10px 10px;
+}
+
+#footer p{
+	color:white;
+	font-size: 16px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+#footer img{
+	margin-right: auto;
+	margin-left: auto;
+}
+.corpo a, h1{
+	display: list-item;
+	list-style: none;
+	text-align: center;
+	color: black;
+}
+.corpo a{
+	font-size: 20px;
+}
+.corpo h1{
+	font-family:"Top Secret";
+}
+
+.col-md-2{
+	font-family:"Top Secret";
+	color:#0066cc;
+	text-align: center;
+	font-size: 70px;
+	margin-top: 150px;
+	
+}
+.corpo img{
+	border-radius: 100%;
+}
+.arame img{
+	width: 100%;
+	height: 70%;
+}
+@media(max-width: 991px){
+	.logo-site{
+		max-width: 150px;
+
+	}
+	.col-md-2{
+		margin-top: 0px;
+	}
+}
+	header .navbar-nav>li>a{
+		font-size: 18px;
+		margin-top: -16px;
+	}
+
+}
+@media(max-width: 767px){
+	.logo-site{
+		max-width: 150px;
+	}
+	.col-md-2{
+		margin-top: 0px;
+	}
+	
+}
