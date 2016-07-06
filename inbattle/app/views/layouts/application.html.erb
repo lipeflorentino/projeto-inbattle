@@ -8,11 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>IN Battle</title>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css.scss" rel="stylesheet">
+    
     <%= render 'layouts/shim' %>
 	
   </head>
@@ -27,11 +26,8 @@
     <br>
     <%= render 'layouts/footer' %>
     
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="http://simplewebcodes.com/wp-content/themes/scriptous/plugins/bootstrap/js/bootstrap.min.js?ver=4.0"></script>
+    
   </body>
 
 </html>

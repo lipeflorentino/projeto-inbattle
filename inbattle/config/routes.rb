@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root             'paginas#home'
   get 'alistamento'    => 'paginas#alistamento'
   get 'heroisdeguerra'   => 'paginas#heroisdeguerra'
-  get 'sos' => 'paginas#sos'
+  get 'sos' => 'contacts#new'
   get 'signup'  => 'sessions#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'

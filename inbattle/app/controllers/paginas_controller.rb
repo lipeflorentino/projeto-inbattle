@@ -25,18 +25,32 @@ class PaginasController < ApplicationController
 		@assunto1 = Tema.find(2)
 		@assunto2 = Tema.find(3)
 		@assunto3 = Tema.find(4)
-		
-	
+
   end
 
   def alistamento
   end
 
   def heroisdeguerra
-  	
-  	@candidatoa = Candidato.find(1)
-		@candidatob = Candidato.find(2)
-		@candidatoc = Candidato.find(3)
+  	#! Constroi array dos primeiros 3 candidatos com maior quantidade de votos de acordo com um id de tema
+  	tema = Tema.find(1)
+  	candidatos = verifica_mais_votos(tema.id) 
+
+		if !candidatos.nil?
+  		@candidatoDiaAtual1 = candidatos[0]
+		  	if !candidatos[1].nil?
+					@candidatoDiaAtual2 = candidatos[1]
+			end
+			if !candidatos[2].nil?
+				@candidatoDiaAtual3 = candidatos[2]
+			end
+		else
+			candidato_nulo = Candidato.find(1)
+			candidato_nulo.endereco = "/"
+			@candidatoDiaAtual1 = candidato_nulo
+			@candidatoDiaAtual2 = candidato_nulo
+			@candidatoDiaAtual3 = candidato_nulo
+		end
 		
   end
 

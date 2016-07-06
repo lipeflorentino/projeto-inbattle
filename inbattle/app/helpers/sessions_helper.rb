@@ -114,5 +114,78 @@ module SessionsHelper
 	return @local.pontos
   end
   
+  def candidatos_to_array(id_tema)
+    i = 1
+    array_candidatos = []
+    while i < Candidato.count
+      candidato_atual = Candidato.find(i)
+      if candidato_atual.tema_id == id_tema
+        array_candidatos.push(candidato_atual)
+      end
+      i = i + 1
+    end
+    return array_candidatos
+  end
+  
+  def verifica_mais_votos(id_tema)
+    
+    maiorDoDia = nil
+    maior2 = nil
+    maior3 = nil
+    
+    if candidatos_to_array(id_tema).length > 0
+      candidatos = candidatos_to_array()
+      candidatos_do_dia = [3]
+      maiorDoDia = candidatos[0]
+      
+      if candidatos.length == 2
+      	maior2 = candidatos[1]
+      	if candidatos[1].pontos > candidatos[0].pontos
+      		maiorDoDia = candidatos[1]
+      		maior2 = candidatos[0]
+      	end
+      end
+      
+      if candidatos.length > 2
+      	maior3 = candidatos[2]
+      	if maior3.pontos > maior1.pontos
+      	  maior3 = maior2
+      	  maior2 = maior1
+      	  maiorDoDia = candidatos[2]
+        else
+          if maior3.pontos > maior2.pontos
+            maior3 = maior2
+            maior2 = candidatos[2]
+          end
+        end
+        
+        i = 3
+        while i < candidatos.length
+          atual = candidatos[i]
+          if atual.pontos > maiorDoDia.pontos
+          	maior3 = maior2
+            maior2 = maiorDoDia
+            maiorDoDia = atual
+          else
+          	if atual.pontos > maior2.pontos
+          		maior3 = maior2
+          		maior2 = atual
+        	else
+        		if atual.pontos > maior3.pontos
+              maior3 = atual
+        		end
+                end
+          end
+          i = i + 1
+        end 
+      end
+    end
+    
+    candidatos_do_dia[0] = melhorDoDia
+    candidatos_do_dia[1] = maior2
+    candidatos_do_dia[2] = maior3
+    return candidatos_do_dia
+  end
+  
 end
   

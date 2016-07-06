@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="col-lg-6 col-md-6 pag-contato">
+		<h1>Dúvidas, elogios, sugestões? Entre em contato conosco!</h1>
+		
+        <h2>Data de envio: <%= Time.now.strftime("%d/%m/%Y %H:%M") %></h2>
+        
+        <p><strong>Visitante: </strong><%= @contact['name'] %></p>
+        
+        <p><strong>Email: </strong><%= @contact['email'] %></p>
+        
+        <% if @contact['subject'].present? %>
+          <p><strong>Assunto: </strong><%= @contact['subject'] %></p>
+        <% end %>
+        
+        <p><strong>Mensagem:</strong></p>
+        <p><%= @contact['message'] %></p>
+	</div>
+	<div class="col-lg-6 col-md-6">
+		<h1><strong>A IN Junior</strong></h1>
+		
+		<p>A IN Junior é a empresa júnior de computação da UFF. Atuamos desde novembro de 2014 em consultoria em TI e criação de sites e sistemas web.</p>
+		<p>Nossa missão é desenvolver pessoas e entregar soluções inteligentes em TI. Acreditamos que através do nosso trabalho, dedicação e a integração com o MEJ e a Universidade podemos entregar uma experiência enriquecedora para nossos membrose retribuir a sociedade com nossos serviços.</p>
+	</div>
+	
+</div>
+
+
+
+		
+
+
+		
